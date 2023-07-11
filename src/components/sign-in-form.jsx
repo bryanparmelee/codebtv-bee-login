@@ -46,36 +46,42 @@ const SignInForm = () => {
     }
   };
   return (
-    <div>
+    <div className="sign-in-page">
       {currentUser ? (
         <h1>Logged in as {currentUser.email}</h1>
       ) : (
-        <>
-          <h1>Sign in with email and password</h1>
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email</label>
-            <input
-              name="email"
-              type="email"
-              placeholder="Email"
-              autoComplete="email"
-              required
-              onChange={handleChange}
-              value={email}
-            />
-            <label htmlFor="password">Password</label>
-            <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              autoComplete="new-password"
-              required
-              onChange={handleChange}
-              value={password}
-            />
-            <button type="submit">Sign In</button>
+        <div className="form-container">
+          <h1>Login</h1>
+          <form onSubmit={handleSubmit} className="form-fields">
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                autoComplete="email"
+                required
+                onChange={handleChange}
+                value={email}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                name="password"
+                type="password"
+                placeholder="Password"
+                autoComplete="new-password"
+                required
+                onChange={handleChange}
+                value={password}
+              />
+            </div>
+            <button type="submit" className="submit-button">
+              Sign In
+            </button>
           </form>
-        </>
+        </div>
       )}
     </div>
   );
