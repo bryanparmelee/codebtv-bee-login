@@ -63,7 +63,7 @@ const SignUpForm = () => {
         <input
           name="password"
           type="password"
-          placeholder="Email"
+          placeholder="Password"
           autoComplete="new-password"
           required
           onChange={handleChange}
@@ -73,6 +73,7 @@ const SignUpForm = () => {
         <label htmlFor="confirmPassword">Confirm Password</label>
         <input
           name="confirmPassword"
+          type="password"
           placeholder="Confirm password"
           required
           onChange={handleChange}
@@ -81,8 +82,6 @@ const SignUpForm = () => {
 
         <button type="submit">Sign Up</button>
       </form>
-      <p>Already a user?</p>
-      <button type="button">Sign in</button>
     </div>
   );
 };
